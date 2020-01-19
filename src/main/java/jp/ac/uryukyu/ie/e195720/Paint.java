@@ -15,9 +15,9 @@ public class Paint extends JPanel {
     private static final int HEIGHT = 240;
     //画像の座標
     int M = 780;  //Mの初期座標
-    int E = 20;   //Eの初期座標
-    int Ew = 780; //Mの勝利条件
-    int Mw = 20;  //Eの勝利条件
+    int Mw = 20;  //Mの勝利条件
+    int E = 20;
+    int Ew = 780;
 
     public Paint() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
