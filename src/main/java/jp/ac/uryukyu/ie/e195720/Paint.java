@@ -30,7 +30,7 @@ public class Paint extends JPanel {
         if(M != Mw){
             g.drawImage(slime,E,Ey,100,100,this);
             g.drawImage(dog,M,My,-100,100,this);
-            if(E == M - 120){
+            if(E == M - 150){
                 battle();
             }
             run();
