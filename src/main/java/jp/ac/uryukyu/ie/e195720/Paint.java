@@ -17,7 +17,6 @@ public class Paint extends JPanel {
     int M = 780;  //Mの初期座標
     int Mw = 20;  //Mの勝利条件
     int E = 20;
-    int Ew = 780;
     int My = 50;
     int Ey = 50;
 

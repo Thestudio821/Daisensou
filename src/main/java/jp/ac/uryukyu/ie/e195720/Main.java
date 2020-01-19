@@ -16,11 +16,7 @@ public class Main extends JFrame {
         // パネルサイズに合わせてフレームサイズを自動設定
         pack();
     }
-
     public static void main(String[] args) {
-        int M = 780;
-        int E = 20;
-        String pass = "/Users/e195720/Image/";
 
         Main frame = new Main();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
