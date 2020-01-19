@@ -30,9 +30,7 @@ public class Paint extends JPanel {
             g.drawImage(dog,M,50,-100,100,this);
             run();
         }else{
-            g.drawImage(win,300,50,300,100,this);
-
-
+            g.drawImage(win,250,50,300,100,this);
         }
     }
     public void run() {
@@ -44,7 +42,5 @@ public class Paint extends JPanel {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
-
 }
