@@ -5,20 +5,20 @@ import java.awt.*;
 
 public class Paint extends JPanel {
     //画像のパス
-    String pass = "/Users/e195720/Image/";
-    Image slime = Toolkit.getDefaultToolkit().getImage(pass + "boss.png");
-    Image dog = Toolkit.getDefaultToolkit().getImage(pass + "kerube.png");
-    Image win = Toolkit.getDefaultToolkit().getImage(pass + "omedetou.png");
+    private String pass = "/Users/e195720/Image/";
+    private Image slime = Toolkit.getDefaultToolkit().getImage(pass + "boss.png");
+    private Image dog = Toolkit.getDefaultToolkit().getImage(pass + "kerube.png");
+    private Image win = Toolkit.getDefaultToolkit().getImage(pass + "omedetou.png");
 
     // パネルサイズ
     private static final int WIDTH = 800;
     private static final int HEIGHT = 180;
     //画像の座標
-    int M = 780;  //Mの初期座標
-    int Mw = 20;  //Mの勝利条件
-    int E = 20;
-    int My = 50;
-    int Ey = 50;
+    private int M = 780;  //Mの初期座標
+    private int Mw = 20;  //Mの勝利条件
+    private int E = 20;
+    private int My = 50;
+    private int Ey = 50;
 
     public Paint() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
