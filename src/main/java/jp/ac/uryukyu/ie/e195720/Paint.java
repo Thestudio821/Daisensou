@@ -24,6 +24,10 @@ public class Paint extends JPanel {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
     }
 
+    /**
+     * 画像表示のメソッド
+     * @param g
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         if(M != Mw){
@@ -37,6 +41,11 @@ public class Paint extends JPanel {
             g.drawImage(win,250,50,300,100,this);
         }
     }
+
+    /**
+     * 画像のx座標をずらして再描写する
+     * 動いているように見える
+     */
     public void run() {
         repaint();
         E = E + 1;
@@ -47,6 +56,10 @@ public class Paint extends JPanel {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 接触した時に戦っている感を出させる
+     */
     public void battle(){
         repaint();
         Ey = Ey + 400;
