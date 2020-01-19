@@ -8,6 +8,7 @@ public class Paint extends JPanel {
     String pass = "/Users/e195720/Image/";
     Image slime = Toolkit.getDefaultToolkit().getImage(pass + "boss.png");
     Image dog = Toolkit.getDefaultToolkit().getImage(pass + "kerube.png");
+    Image win = Toolkit.getDefaultToolkit().getImage(pass + "omedetou.png");
 
     // パネルサイズ
     private static final int WIDTH = 800;
@@ -15,8 +16,8 @@ public class Paint extends JPanel {
     //画像の座標
     int M = 780;  //Mの初期座標
     int E = 20;   //Eの初期座標
-    int Mw = 780; //Mの勝利条件
-    int Ew = 20;  //Eの勝利条件
+    int Ew = 780; //Mの勝利条件
+    int Mw = 20;  //Eの勝利条件
 
     public Paint() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
@@ -24,11 +25,17 @@ public class Paint extends JPanel {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(slime,E,50,100,100,this);
-        g.drawImage(dog,M,50,-100,100,this);
-        move();
+        if(M != Mw){
+            g.drawImage(slime,E,50,100,100,this);
+            g.drawImage(dog,M,50,-100,100,this);
+            run();
+        }else{
+            g.drawImage(win,300,50,300,100,this);
+
+
+        }
     }
-    public void move() {
+    public void run() {
         repaint();
         E = E + 1;
         M = M -1;
@@ -37,6 +44,7 @@ public class Paint extends JPanel {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 
 }
