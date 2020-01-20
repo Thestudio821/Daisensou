@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Paint extends JPanel {
     //画像のパス
-    private String pass = "/Users/e195720/IdeaProjects/Daisensou/src/main/Image/";
+    private String pass = "/Users/e195720/IdeaProjects/Daisensou/src/Image/";
     private Image slime = Toolkit.getDefaultToolkit().getImage(pass + "boss.png");
     private Image dog = Toolkit.getDefaultToolkit().getImage(pass + "kerube.png");
     private Image win = Toolkit.getDefaultToolkit().getImage(pass + "omedetou.png");
