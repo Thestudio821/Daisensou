@@ -20,9 +20,13 @@ public class Paint extends JPanel {
     private int My = 50;
     private int Ey = 50;
 
-    public Paint() {
-        setPreferredSize(new Dimension(WIDTH, HEIGHT));
-    }
+
+
+    Hero hero = new Hero("dog", 10, 5);
+    Enemy enemy = new Enemy("slime", 6, 3);
+
+
+    public Paint() { setPreferredSize(new Dimension(WIDTH, HEIGHT)); }
 
     /**
      * 画像表示のメソッド
@@ -62,11 +66,25 @@ public class Paint extends JPanel {
      */
     public void battle(){
         repaint();
-        Ey = Ey + 400;
+        while( hero.getDead() && enemy.getDead()) {
+            hero.attack(enemy);
+            enemy.attack(hero);
+            down();
+        }
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+    public void down(){
+        int HeroHP = hero.getHitPoint();
+        int EnemyHP = enemy.getHitPoint();
+        if(HeroHP <= 0){
+            My = My + 400;
+        }
+        if(EnemyHP <= 0){
+            Ey = Ey + 400;
         }
     }
 }
