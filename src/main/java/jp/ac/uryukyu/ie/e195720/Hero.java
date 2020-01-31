@@ -1,8 +1,10 @@
 package jp.ac.uryukyu.ie.e195720;
 
+import java.awt.*;
+
 public class Hero extends LivingThing {
-    Hero(String name, int maximumHP, int attack){
-        super(name, maximumHP, attack);
+    Hero(String name, int maximumHP, int attack, Image img, int x, int y){
+        super(name, maximumHP, attack,img,x,y);
     }
 
     @Override

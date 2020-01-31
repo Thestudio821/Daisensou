@@ -1,7 +1,10 @@
 package jp.ac.uryukyu.ie.e195720;
+
+import java.awt.*;
+
 public class Enemy extends LivingThing{
-    Enemy(String name, int maximumHP, int attack){
-        super(name, maximumHP, attack);
+    Enemy(String name, int maximumHP, int attack, Image img, int x, int y){
+        super(name, maximumHP, attack,img,x,y);
     }
 
     @Override
@@ -15,4 +18,5 @@ public class Enemy extends LivingThing{
             System.out.printf("%sは倒れた。\n", name);
         }
     }
+
 }
