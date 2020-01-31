@@ -6,6 +6,7 @@ import java.awt.*;
 public class Paint extends JPanel {
     //画像のパス
     private String pass = "https://github.com/Thestudio821/Daisensou/blob/master/src/Image/\n";
+    //private String pass = "/Users/e195720/IdeaProjects/Daisensou/src/Image/";
     private Image slime = Toolkit.getDefaultToolkit().getImage(pass + "boss.png");
     private Image dog = Toolkit.getDefaultToolkit().getImage(pass + "kerube.png");
     private Image win = Toolkit.getDefaultToolkit().getImage(pass + "omedetou.png");
@@ -72,10 +73,20 @@ public class Paint extends JPanel {
             hero.attack(enemy);
             enemy.attack(hero);
         }
+
+        down();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+    public void down(){
+        if(enemy.getHitPoint() <= 0 ){
+            Ey = Ey + 400;
+        }
+        if(hero.getHitPoint() <= 0){
+            My = My + 400;
         }
     }
 }
